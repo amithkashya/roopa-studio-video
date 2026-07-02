@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Booking | Roopa Studio & Video</title>
+    <meta
+      name="description"
+      content="Contact Roopa Studio & Video in Basavanagudi, Bangalore for photography, videography, studio services and easy booking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container">
+          <div class="topbar">
+            <a class="brand" href="index.html">
+              <span class="brand-mark">RS</span>
+              <span class="brand-copy">
+                <h1 data-business-name>Roopa Studio & Video</h1>
+                <p>Photography, videography and studio coverage</p>
+              </span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Open menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <nav class="nav-links">
+              <a data-nav href="index.html">Home</a>
+              <a data-nav href="services.html">Services</a>
+              <a data-nav href="offers.html">Offers</a>
+              <a data-nav href="portfolio.html">Portfolio</a>
+              <a data-nav href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-cta">
+              <small>Instant booking support<br /><span data-phone-primary>+91 9448055190</span></small>
+              <a class="btn" data-link="phone-primary" href="#">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <span class="eyebrow">Contact & inquiry flow</span>
+            <h2>One page for calls, map, WhatsApp and booking details.</h2>
+            <p>
+              This page is the conversion center of the website. It gives visitors every important route to reach the
+              studio and sends a properly formatted booking inquiry in a single step.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container contact-layout">
+            <div>
+              <h2>Contact the studio</h2>
+              <p class="section-lead">
+                Share your event type, date, city and budget to get the right package faster.
+              </p>
+
+              <div class="contact-cards grid-three">
+                <article class="contact-card">
+                  <h3>Call</h3>
+                  <p>Speak directly for availability and quick package guidance.</p>
+                  <a data-link="phone-primary" href="#"><span data-phone-primary>+91 9448055190</span></a>
+                </article>
+                <article class="contact-card">
+                  <h3>WhatsApp</h3>
+                  <p>Send event details instantly with one tap.</p>
+                  <a data-link="whatsapp" href="#">Open WhatsApp Booking</a>
+                </article>
+                <article class="contact-card">
+                  <h3>Location</h3>
+                  <p>Business presence at <span data-location-label>52/1, 1st Floor, Nagasandra Circle, Basavanagudi, Bangalore - 560004</span>.</p>
+                  <a data-link="maps" href="#" target="_blank" rel="noreferrer">Open Map Search</a>
+                </article>
+              </div>
+
+              <div class="contact-form" style="margin-top: 1.2rem;">
+                <h3>Find the studio</h3>
+                <ul class="contact-list">
+                  <li><a data-link="phone-secondary" href="#"><span data-phone-secondary>+91 80 26676658</span></a></li>
+                  <li><a data-link="maps" href="#" target="_blank" rel="noreferrer">Open in Google Maps</a></li>
+                  <li><span>Landmark: Near Bharathi Nursing Home / Nagasandra Circle</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h3>Booking inquiry form</h3>
+              <p>
+                Fill the details once. Then submit them into the backend, or use the WhatsApp and email shortcuts as
+                extra contact options.
+              </p>
+
+              <form id="booking-form">
+                <div class="field-grid">
+                  <div class="form-field">
+                    <label for="name">Your Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter full name" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Enter phone number" required />
+                  </div>
+                </div>
+
+                <div class="field-grid">
+                  <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter email address" />
+                  </div>
+                  <div class="form-field">
+                    <label for="eventType">Event Type</label>
+                    <select id="eventType" name="eventType" required>
+                      <option value="">Select an option</option>
+                      <option>Wedding</option>
+                      <option>Pre-Wedding Shoot</option>
+                      <option>Reception</option>
+                      <option>Jago / Home Function</option>
+                      <option>Baby / Family Shoot</option>
+                      <option>Product Shoot</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field-grid">
+                  <div class="form-field">
+                    <label for="eventDate">Event Date</label>
+                    <input id="eventDate" name="eventDate" type="date" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget" name="budget">
+                      <option value="">Select budget range</option>
+                      <option>Need starter package</option>
+                      <option>Need premium package</option>
+                      <option>Need full wedding story package</option>
+                      <option>Need custom quote</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="location">Event Location</label>
+                  <input id="location" name="location" type="text" placeholder="Enter city or venue" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="message">Extra Details</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell the studio about timings, functions, package preference or anything important"
+                  ></textarea>
+                </div>
+
+                <div class="form-actions">
+                  <button class="btn" type="button" data-send="submit">Submit Booking</button>
+                  <button class="btn" type="button" data-send="whatsapp">Send on WhatsApp</button>
+                  <button class="btn-outline" type="button" data-send="email">Send by Email</button>
+                </div>
+
+                <div class="form-note">
+                  Backend booking is now active. To activate one-click email notifications from the server, copy
+                  <strong>.env.example</strong> to <strong>.env</strong> and fill in your SMTP and booking email
+                  details.
+                </div>
+
+                <div class="status-message" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <iframe
+              class="map-frame"
+              title="Roopa Studio & Video map"
+              src="https://www.google.com/maps?q=Roopa%20Studio%20%26%20Video%2C%2052%2F1%201st%20Floor%2C%20Nagasandra%20Circle%2C%20Basavanagudi%2C%20Bangalore%20560004&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-card">
+            <div class="footer-grid">
+              <div>
+                <div class="brand">
+                  <span class="brand-mark">RS</span>
+                  <span class="brand-copy">
+                    <h1 data-business-name>Roopa Studio & Video</h1>
+                    <p>Photography, videography and event coverage</p>
+                  </span>
+                </div>
+                <p>Direct booking support for weddings, reels, live coverage and family shoots.</p>
+              </div>
+              <div>
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                  <li><a data-link="phone-primary" href="#"><span data-phone-primary>+91 9448055190</span></a></li>
+                  <li><a data-link="phone-secondary" href="#"><span data-phone-secondary>+91 80 26676658</span></a></li>
+                  <li><a data-link="maps" href="#" target="_blank" rel="noreferrer">Open Maps</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Social</h3>
+                <ul class="footer-links">
+                  <li><a data-link="whatsapp" href="#">WhatsApp Booking</a></li>
+                  <li><a data-link="phone-primary" href="#">Call Mobile</a></li>
+                  <li><a data-link="phone-secondary" href="#">Call Landline</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

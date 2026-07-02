@@ -1,0 +1,24 @@
+{
+  "name": "roopa-studio-site",
+  "version": "1.0.0",
+  "description": "Full-stack website for Roopa Studio & Video, Basavanagudi, Bangalore, with booking API and optional email notifications.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "photography",
+    "wedding",
+    "express",
+    "booking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "nodemailer": "^9.0.3",
+    "pg": "^8.16.3"
+  }
+}
