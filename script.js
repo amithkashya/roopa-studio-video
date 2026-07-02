@@ -12,6 +12,18 @@ const businessInfo = {
 
 const API_BASE = window.location.origin;
 
+function setupAppShell() {
+  if (window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone) {
+    document.body.classList.add("standalone");
+  }
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    });
+  }
+}
+
 function markActiveNav() {
   const page = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll("[data-nav]").forEach((link) => {
@@ -193,6 +205,7 @@ function setupBookingForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  setupAppShell();
   markActiveNav();
   setupMenu();
   hydrateBusinessDetails();

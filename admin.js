@@ -2,6 +2,16 @@ const adminForm = document.querySelector("#admin-form");
 const adminStatus = document.querySelector("#admin-status");
 const bookingResults = document.querySelector("#booking-results");
 
+if (window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone) {
+  document.body.classList.add("standalone");
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  });
+}
+
 function showAdminStatus(message) {
   if (!adminStatus) return;
   adminStatus.textContent = message;

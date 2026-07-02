@@ -23,6 +23,13 @@ Full-stack multi-page business website for `Roopa Studio & Video`, Basavanagudi,
 - Optional SMTP email notifications for each new inquiry
 - Protected booking list endpoint at `GET /api/bookings?key=YOUR_ADMIN_KEY`
 
+## Device support
+
+- Responsive layout for phones, tablets, laptops and desktops
+- Mobile-safe spacing for iPhone and Android browsers
+- Installable web app support through `site.webmanifest`
+- Service worker support for faster repeat loads and a basic offline screen
+
 ## Important setup
 
 Open [script.js](C:\Users\AMK__\Downloads\ROOPASTUD\script.js) and update if needed:
@@ -103,3 +110,7 @@ Render free web services use an ephemeral filesystem, so `bookings.json` is not 
 - Render web services: https://render.com/docs/web-services
 - Render Postgres connection guide: https://render.com/docs/postgresql-creating-connecting
 - Render free tier limitations: https://render.com/docs/free
+
+<!-- #git add .
+git commit -m "your update message"
+git push -->
