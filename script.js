@@ -4,7 +4,7 @@ const businessInfo = {
   city: "Basavanagudi, Bangalore",
   locationLabel: "52/1, 1st Floor, Nagasandra Circle, Basavanagudi, Bangalore - 560004",
   primaryPhone: "+91 9448055190",
-  secondaryPhone: "+91 80 26676658",
+  secondaryPhone: "+91 9448747446",
   whatsappPhone: "919448055190",
   bookingEmail: "YOUR_EMAIL_HERE@example.com",
   mapsQuery: "Roopa Studio & Video, 52/1 1st Floor, Nagasandra Circle, Basavanagudi, Bangalore 560004"

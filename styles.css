@@ -624,7 +624,8 @@ main {
 
 .offer-banner,
 .cta-banner {
-  margin: 2rem 0 0;
+  width: 100%;
+  margin: 0;
   padding: 1.6rem;
   border-radius: var(--radius-xl);
   background:
