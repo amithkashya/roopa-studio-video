@@ -331,6 +331,12 @@ main {
 .visual-card {
   position: relative;
   min-height: 560px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+  grid-template-areas:
+    "main note"
+    "main secondary";
+  gap: 1rem;
   padding: 1.1rem;
   border-radius: var(--radius-xl);
   background:
@@ -350,7 +356,8 @@ main {
 }
 
 .frame {
-  position: absolute;
+  position: relative;
+  z-index: 1;
   border-radius: 24px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.28);
@@ -371,26 +378,29 @@ main {
 }
 
 .frame-a {
-  inset: 1rem 26% auto 1rem;
-  min-height: 290px;
+  grid-area: main;
+  min-height: 100%;
   background:
     linear-gradient(180deg, transparent 0%, rgba(17, 14, 10, 0.65) 100%),
     url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80") center/cover;
 }
 
 .frame-b {
-  inset: 56% 1rem 1rem 38%;
-  min-height: 180px;
+  grid-area: secondary;
+  min-height: 230px;
+  align-self: end;
   background:
     linear-gradient(180deg, transparent 0%, rgba(17, 14, 10, 0.65) 100%),
     url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80") center/cover;
 }
 
 .floating-note {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  width: min(220px, 55%);
+  position: relative;
+  z-index: 3;
+  grid-area: note;
+  top: auto;
+  right: auto;
+  width: 100%;
   padding: 1rem;
   border-radius: 18px;
   background: rgba(255, 250, 243, 0.92);
@@ -907,20 +917,46 @@ main {
   }
 
   .visual-card {
-    min-height: 460px;
-  }
-
-  .frame-a {
-    inset: 1rem 18% auto 1rem;
-  }
-
-  .frame-b {
-    inset: 58% 1rem 1rem 28%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "note"
+      "main"
+      "secondary";
   }
 
   .grid-three,
   .field-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  .visual-card {
+    min-height: auto !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "note"
+      "main"
+      "secondary";
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .frame {
+    position: relative !important;
+    inset: auto !important;
+    min-height: 260px;
+  }
+
+  .floating-note {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100%;
+    margin-top: 0;
+    order: -1;
   }
 }
 
@@ -946,13 +982,7 @@ main {
   }
 
   .visual-card {
-    min-height: 400px;
-  }
-
-  .floating-note {
-    position: static;
-    width: 100%;
-    margin-top: 12rem;
+    min-height: auto;
   }
 
   .sticky-cta {

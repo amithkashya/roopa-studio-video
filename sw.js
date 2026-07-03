@@ -1,4 +1,4 @@
-const CACHE_NAME = "roopa-studio-v1";
+const CACHE_NAME = "roopa-studio-v2";
 const APP_SHELL = [
   "/",
   "/index.html",
@@ -55,27 +55,25 @@ self.addEventListener("fetch", (event) => {
   }
 
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) {
-        return cached;
-      }
-
-      return fetch(event.request)
-        .then((response) => {
-          if (!response || response.status !== 200 || response.type !== "basic") {
-            return response;
-          }
-
+    fetch(event.request)
+      .then((response) => {
+        if (response && response.status === 200 && response.type === "basic") {
           const copy = response.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-          return response;
-        })
-        .catch(() => {
-          if (event.request.mode === "navigate") {
-            return caches.match("/offline.html");
-          }
-          return caches.match("/index.html");
-        });
-    })
+        }
+        return response;
+      })
+      .catch(async () => {
+        const cached = await caches.match(event.request);
+        if (cached) {
+          return cached;
+        }
+
+        if (event.request.mode === "navigate") {
+          return caches.match("/offline.html");
+        }
+
+        return caches.match("/index.html");
+      })
   );
 });
